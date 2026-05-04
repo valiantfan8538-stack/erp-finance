@@ -65,8 +65,9 @@ class ThinkOrmVoucherRepository implements VoucherRepositoryInterface
         try {
             $voucherId = Db::table('finance_voucher')->insertGetId($voucherData);
 
-            foreach ($entries as $entry) {
+            foreach ($entries as $i => $entry) {
                 $entry['voucher_id'] = $voucherId;
+                $entry['entry_no']   = $i + 1;
                 Db::table('finance_voucher_entry')->insert($entry);
             }
 
