@@ -1,0 +1,22 @@
+# Environment
+.env
+!.env.example
+
+# Dependencies
+frontend/node_modules/
+backend/vendor/
+
+# Runtime / cache
+backend/runtime/
+frontend/.vite/
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
